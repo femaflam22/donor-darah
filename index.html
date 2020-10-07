@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Donor Darah</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+		<nav>
+			<ul>
+				<li><img src="img/trans.png"></li>
+				<li class="nama">Donor Darah</li>
+		</nav>
+
+		<article>
+			<div class="gambar">
+			</div>
+		</article>
+
+		<hr>
+
+		<article class="kedua">
+		<div id="about">
+			<div class="card">
+				<h1>DONOR DARAH with RAIN HOSPITAL</h1>
+				<p>
+					Kini, RAIN hospital telah menyidiakan fasilitas yang dapat memudahkan bagi anda yang ingin ikut mendonorkan darah anda kepada pasien - pasien diluaran sana yang sangat sangat membutuhkan darah anda saat ini.
+				</p>
+				<p>
+					Tahapan yang bisa anda lakukan ialah :
+					<ul>
+						<li>Mengisi formulir pada website ini</li>
+						<li>Konfirmasi syarat&ketentuan pada form yang nanti dikirimkan ke email anda</li>
+						<li>Mendatangi RAIN hospital sesuai jadwal yang anda buat</li>
+						<li>Melakukan pemeriksaan kesehatan</li>
+						<li>Melakukan tranfusi darah.</li>
+					</ul>
+				</p>
+				<h4>
+					Kata mereka yang sudah mendonorkan darahnya : </h4>
+
+					<div class="testimoni">
+						<div class="kotak">
+							<img src="img/1.jpg">
+							<p>"Bagi kamu yang merasa memenuhi syarat kesehatan donor darah, Ayo donorkan darahmu!"</p>
+						</div>
+						<div class="kotak kotak2">
+							<img src="img/2.jpg">
+							<p>"Ayo lakukan aksi mulai ini, bersama kita, kami dan kamu, kita selamatkan saudara kita diluaran sana!"</p>
+						</div>
+						<div class="kotak">
+							<img src="img/3.jpg">
+							<p>"Bantu teman-teman kita yang sedang berjuang untuk hidup diluaran sana yu!"</p>
+						</div>
+					</div>
+			</div>
+		</div>
+
+		<aside>
+		<div class="registrasi">
+		<div class="title">
+			Form Pengajuan
+		</div>
+		<div class="error"></div>
+		<form class="form">
+			<div class="data">
+				<label>Nama Lengkap</label>
+				<input type="text" class="input" id="nama" autocomplete="off" required>
+			</div>
+			<div class="data">
+				<label>Jenis Kelamin</label>
+				<div class="pilihan">
+					<select id="jk" required>
+						<option value="">pilih</option>
+						<option value="P">perempuan</option>
+						<option value="L">laki-laki</option>
+					</select>
+				</div>
+			</div>
+			<div class="data">
+				<label>Umur</label>
+				<input type="text" class="input" autocomplete="off" id="umur" required>
+			</div>
+			<div class="data">
+				<label>Golongan Darah</label>
+				<div class="pilihan">
+					<select id="goldar" required>
+						<option value="">pilih</option>
+						<option value="A">A</option>
+						<option value="B">B</option>
+						<option value="AB">AB</option>
+						<option value="O">O</option>
+					</select>
+				</div>
+			</div>
+			<div class="data">
+				<label>Atur Tanggal</label>
+				<input type="date" class="input" id="tanggal" required>
+			</div>
+			<div class="data">
+				<label>Email</label>
+				<input type="email" class="input" id="email" autocomplete="off"required>
+			</div>
+			<div class="data">
+				<label>No.Telp (08-)</label>
+				<input type="text" class="input" id="telp" autocomplete="off" required>
+			</div>
+			<div class="data cekR">
+				<label class="cek">
+					<input type="checkbox">
+					<span class="checkmark"></span>
+				</label>
+				<p>Beri tau saya syarat & ketentuan lewat email/WhatsApp.</p>
+			</div>
+			<div class="data">
+				<input type="submit" value="registrasi" class="btn" id="buttonSubmit" onclick="validate()">
+			</div>
+		</div>
+		</aside>
+	</article>
+
+<footer>
+	<p> Fema Flamelina Putri &#169; </p>
+</footer>
+
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>

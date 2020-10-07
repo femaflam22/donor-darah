@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background: #fff;
+	color: #031334;
+}
+
+nav {
+	background: #e82f41;
+	padding: 15px 30px 5px 30px;
+}
+nav ul{
+	display: inline-flex;
+	list-style: none;
+}
+nav ul li{
+	font-size: 22px;
+	margin-left: 20px;
+	color: #fff;
+	font-weight: bold;
+}
+nav ul li img{
+	width: 30px;
+}
+
+.gambar{
+	width: 50%;
+	height: 350px;
+	margin-left: 25%;
+	margin-top: 5%;
+	margin-bottom: 2%;
+	position: relative;
+	background-image: url('img/b1.jpg');
+	opacity: 0.6;
+	background-size: 100% 100%;
+	animation: slide 16s infinite linear;
+}
+@keyframes slide{
+	0%{ 
+		background-image: url('img/b1.jpg');
+		opacity: 0.9;
+	}
+	35%{ 
+		background-image: url('img/b2.jpg');
+		opacity: 0.9;
+	}
+	75%{ 
+		background-image: url('img/b3.jpg');
+		opacity: 0.9;
+	}
+}
+
+.kedua{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#about{
+	width: 60%;
+	margin-left: 20px;
+	border-radius: 5px;
+	padding: 30px;
+	overflow: auto;
+	display: flex;
+	color: #333;
+	margin-top: 5%;
+}
+#about h1{
+	text-align: center;
+	padding: 10px 0px 50px 0px;
+}
+#about img{
+	width: 50%;
+	margin-left: 28%;
+}
+#about p{
+	text-align: justify;
+	font-size: 16px;
+	padding-top: 20px;
+}
+#about ul{
+	list-style-type: square;
+	margin-top: 10px;
+	margin-left: 35px;
+}
+#about li{
+	margin-bottom: 5px;
+	font-size: 16px;
+}
+#about .testimoni .kotak img{
+	max-width: 100px;
+	border-radius: 50%;
+}
+#about .testimoni{
+	display: flex;
+	flex-wrap: wrap;
+}
+#about .testimoni .kotak{
+	width: 230px;
+	padding: 20px;
+	font-size: 12px;
+	font-family: calibri;
+	margin-top: 35px;
+}
+
+aside{
+	width: 30%;
+	margin-left: 55px;
+	margin-top: 7%;
+}
+
+.registrasi{
+	/* KUNCI UTAMA RESPONSIF ITU DI max-width */
+	max-width: 500px;
+	width: 100%;
+	background: #f9f8e5;
+	margin: 20px auto;
+	padding: 30px;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+	border: 1px solid #102a3b;
+}
+.registrasi .title{
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 25px;
+	color: #102a3b;
+	text-transform: uppercase;
+	text-align: center;
+}
+.registrasi .form{
+	width: 100%;
+}
+.registrasi .form .data{
+	margin-bottom: 14px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.registrasi .form .data label{
+	/* width = biar si inputannya sama semua sejajar */
+	width: 200px;
+	color: #333;
+	margin-bottom: 10px;
+	font-size: 15px;
+}
+.registrasi .form .data .input,
+.registrasi .form .data .textarea{
+	width: 100%;
+	outline: none;
+	border: 1px solid #102a3b;
+	font-size: 15px;
+	padding: 4px 6px;
+	border-radius: 3px;
+	transition: all 0.3s ease;
+} 
+.registrasi .form .data .textarea{
+	/* biar textbox gabisa diubah ukurannya sma user */
+	resize: none;
+	height: 125px;
+}
+.registrasi .form .data .pilihan{
+	position: relative;
+	width: 100%;
+	height: 40px;
+}
+.registrasi .form .data .pilihan select{
+	/* biar tanda panah kebawah ilang */ 
+	-webkit-appearance : none;
+	appearance : none;
+	border: 1px solid #102a3b;
+	width: 100%;
+	height: 100%;
+	padding: 6px 10px;
+	border-radius: 3px;
+	outline: none;
+}
+.registrasi .form .data .pilihan:before{
+	content: "";
+	position: absolute;
+	top: 12px;
+	right: 10px;
+	border: 8px solid;
+	/* buat bikin tanda panah, semuanya kode di before ini sih */
+	border-color: #333 transparent transparent transparent;
+	/* kan kalo gapke ini list nya keluar cmn pas klik ada kata2nya, ditanda panahnya gabisa
+	kalo make tanda di tanda panah klik bisa */
+	pointer-events: none;
+}
+.registrasi .form .data .input:focus,
+.registrasi .form .data .textarea:focus{
+	border: 1px solid #b3c6b3;
+}
+.registrasi .form .data p{
+	font-size: 14px;
+	color: #333;
+}
+.registrasi .form .data .cek{
+	width: 15px;
+	height: 15px;
+	position: relative;
+	display: block;
+	cursor: pointer;
+}
+.registrasi .form .data.cekR{
+	margin-top: 25px;
+	flex-direction: row;
+}
+.registrasi .form .data.cekR p{
+	margin-left: 10px;
+}
+.registrasi .form .data .cek input[type="checkbox"]{
+	/* biar si checkbox nya ga keliatan soalnya
+	yg mau diliatin, yg checkmark
+	soalnya dia lebih rapih */
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+.registrasi .form .data .cek .checkmark{
+	width: 15px;
+	height: 15px;
+	border: 1px solid #102a3b;
+	display: block;
+	position: relative;
+}
+.registrasi .form .data .cek .checkmark:before{
+	/* ngebentuk tanda ceklis */
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 5px;
+	height: 2px;
+	border: 2px solid;
+	border-color: transparent transparent #fff #fff;
+	transform: rotate(-45deg);
+	/* di none in dulu biar ga keliatan/berfungsi */
+	display: none;
+}
+.registrasi .form .data .cek input[type="checkbox"]:checked ~ .checkmark{
+	background: #102a3b;
+	opacity: 0.6;
+}
+.registrasi .form .data .cek input[type="checkbox"]:checked ~ .checkmark:before{
+	/* none nya diganti block biar keliatan */
+	display: block;
+}
+.registrasi .form .data .btn{
+	width: 100%;
+	padding: 8px 10px;
+	font-size: 17px;
+	border: 0;
+	background: #e82f41;
+	color: #f9f8e5;
+	cursor: pointer;
+	border-radius: 3px;
+	outline: none;
+	margin-top: 10px;
+}
+.registrasi .form .data:last-child{
+	margin-bottom: 0;
+}
+.registrasi .form .data .btn:hover{
+	opacity: 0.6;
+}
+
+footer{
+	background-color: #e82f41;
+	color: #fff;
+	padding: 15px;
+	text-align: center;
+	font-size: 18px;
+	margin-top: 25px;
+}
+
+@media(max-width: 866px){
+	#about{
+		width: 100%;
+	}
+	aside{
+		width: 100%;
+		margin: auto;
+	}
+}
+@media(max-width: 540){
+	#about{
+		margin-left: 0px;
+	}
+}
+@media(max-width: 414px){
+	.gambar{
+		height: 300px;
+		width: 80%;
+		margin-left: 10%;
+	}
+	#about{
+		width: 100%;
+		height: 190vh;
+		margin-left: 0px;
+	}
+	#about .testimoni .kotak{
+		margin-left: 35px;
+		width: 250px;
+	}
+	aside{
+		width: 100%;
+		margin: auto;
+	}
+}
+@media(max-width: 411px){
+	#about{
+		height: 180vh;
+	}
+}
+@media(max-width: 375px){
+	#about{
+		height: 200vh;
+		margin-left: 5px;
+	}
+	#about .testimoni .kotak{
+		margin-left: 0px;
+	}
+}
+@media(max-width: 360px){
+	#about{
+		height: 220vh;
+	}
+}
+@media(max-width: 320px){
+	#about{
+		height: 260vh;
+	}
+}
+@media(max-width: 280px){
+	.gambar{
+		height: 250px;
+	}
+
+	#about{
+		margin-left: 0px;
+		padding: 10px;
+	}
+}
